@@ -1,0 +1,58 @@
+body {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-column-gap: 2rem;
+  padding: 30px 5%;
+  background: #1b1b1b;
+  background-image: repeating-linear-gradient(90deg, transparent 0, transparent 30px, #1f1f1f 11px, #1a1a1a 40px), repeating-linear-gradient(180deg, #252525 0, #252525 30px, transparent 11px, transparent 39px);
+  font-family: "Familiada", cursive;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 6px;
+  line-height: 2rem;
+  color: #ffff00;
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
+.question {
+  opacity: 0;
+}
+
+ol {
+  margin-left: 2rem;
+}
+
+.left {
+  grid-column: 1/2;
+}
+.left .answer {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  opacity: 0;
+}
+.left .answer span:nth-of-type(2) {
+  text-align: right;
+}
+
+.right {
+  grid-column: 2/3;
+}
+.right .wrong {
+  margin-bottom: 10px;
+  font-size: 8rem;
+  line-height: 8rem;
+  opacity: 0;
+}
+
+.total {
+  grid-column: 1/2;
+  text-align: right;
+}
+
+#totalCount {
+  display: inline-block;
+  width: 3rem;
+}
